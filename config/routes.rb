@@ -1,4 +1,6 @@
 CAPA::Application.routes.draw do
+  resources :cas
+
   devise_for :users
   root "pages#home"
   get "about" => "pages#about"

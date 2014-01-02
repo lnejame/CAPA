@@ -11,7 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140101204327) do
+ActiveRecord::Schema.define(version: 20140102005255) do
+
+  create_table "cas", force: true do |t|
+    t.integer  "ca_number"
+    t.string   "subject"
+    t.string   "originator"
+    t.string   "responsible"
+    t.date     "date_opened"
+    t.date     "date_due"
+    t.date     "closed_date"
+    t.string   "priority"
+    t.string   "description"
+    t.string   "customer"
+    t.string   "part"
+    t.string   "containment_action"
+    t.string   "root_Cause"
+    t.string   "rc_category"
+    t.string   "corrective_action"
+    t.string   "preventive_action"
+    t.string   "validation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
