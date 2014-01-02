@@ -1,0 +1,59 @@
+<h1>Listing cas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ca number</th>
+      <th>Subject</th>
+      <th>Originator</th>
+      <th>Responsible</th>
+      <th>Date opened</th>
+      <th>Date due</th>
+      <th>Closed date</th>
+      <th>Priority</th>
+      <th>Description</th>
+      <th>Customer</th>
+      <th>Part</th>
+      <th>Containment action</th>
+      <th>Root cause</th>
+      <th>Rc category</th>
+      <th>Corrective action</th>
+      <th>Preventive action</th>
+      <th>Validation</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cas.each do |ca| %>
+      <tr>
+        <td><%= ca.ca_number %></td>
+        <td><%= ca.subject %></td>
+        <td><%= ca.originator %></td>
+        <td><%= ca.responsible %></td>
+        <td><%= ca.date_opened %></td>
+        <td><%= ca.date_due %></td>
+        <td><%= ca.closed_date %></td>
+        <td><%= ca.priority %></td>
+        <td><%= ca.description %></td>
+        <td><%= ca.customer %></td>
+        <td><%= ca.part %></td>
+        <td><%= ca.containment_action %></td>
+        <td><%= ca.root_Cause %></td>
+        <td><%= ca.rc_category %></td>
+        <td><%= ca.corrective_action %></td>
+        <td><%= ca.preventive_action %></td>
+        <td><%= ca.validation %></td>
+        <td><%= link_to 'Show', ca %></td>
+        <td><%= link_to 'Edit', edit_ca_path(ca) %></td>
+        <td><%= link_to 'Destroy', ca, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ca', new_ca_path %>

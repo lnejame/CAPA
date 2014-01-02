@@ -1,0 +1,91 @@
+<%= form_for(@ca) do |f| %>
+  <% if @ca.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ca.errors.count, "error") %> prohibited this ca from being saved:</h2>
+
+      <ul>
+      <% @ca.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<form class="inline-form">
+<div class="form-group">
+  <div class="field">
+    <%= f.label :ca_number %>
+    <div class="form-control">
+    <%= f.number_field :ca_number %>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :subject %><br>
+    <%= f.text_field :subject %>
+  </div>
+  <div class="field">
+    <%= f.label :originator %><br>
+    <%= f.text_field :originator %>
+  </div>
+  <div class="field">
+    <%= f.label :responsible %><br>
+    <%= f.text_field :responsible %>
+  </div>
+  <div class="field">
+    <%= f.label :date_opened %><br>
+    <%= f.date_select :date_opened %>
+  </div>
+  <div class="field">
+    <%= f.label :date_due %><br>
+    <%= f.date_select :date_due %>
+  </div>
+  <div class="field">
+    <%= f.label :closed_date %><br>
+    <%= f.date_select :closed_date %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br>
+    <%= f.text_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :customer %><br>
+    <%= f.text_field :customer %>
+  </div>
+  <div class="field">
+    <%= f.label :part %><br>
+    <%= f.text_field :part %>
+  </div>
+  <div class="field">
+    <%= f.label :containment_action %><br>
+    <%= f.text_field :containment_action %>
+  </div>
+  <div class="field">
+    <%= f.label :root_Cause %><br>
+    <%= f.text_field :root_Cause %>
+  </div>
+  <div class="field">
+    <%= f.label :rc_category %><br>
+    <%= f.text_field :rc_category %>
+  </div>
+  <div class="field">
+    <%= f.label :corrective_action %><br>
+    <%= f.text_field :corrective_action %>
+  </div>
+  <div class="field">
+    <%= f.label :preventive_action %><br>
+    <%= f.text_field :preventive_action %>
+  </div>
+  <div class="field">
+    <%= f.label :validation %><br>
+    <%= f.text_field :validation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+</div>
+</form>s
+<% end %>

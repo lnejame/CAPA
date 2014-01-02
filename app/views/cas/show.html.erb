@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ca number:</strong>
+  <%= @ca.ca_number %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @ca.subject %>
+</p>
+
+<p>
+  <strong>Originator:</strong>
+  <%= @ca.originator %>
+</p>
+
+<p>
+  <strong>Responsible:</strong>
+  <%= @ca.responsible %>
+</p>
+
+<p>
+  <strong>Date opened:</strong>
+  <%= @ca.date_opened %>
+</p>
+
+<p>
+  <strong>Date due:</strong>
+  <%= @ca.date_due %>
+</p>
+
+<p>
+  <strong>Closed date:</strong>
+  <%= @ca.closed_date %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @ca.priority %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ca.description %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @ca.customer %>
+</p>
+
+<p>
+  <strong>Part:</strong>
+  <%= @ca.part %>
+</p>
+
+<p>
+  <strong>Containment action:</strong>
+  <%= @ca.containment_action %>
+</p>
+
+<p>
+  <strong>Root cause:</strong>
+  <%= @ca.root_Cause %>
+</p>
+
+<p>
+  <strong>Rc category:</strong>
+  <%= @ca.rc_category %>
+</p>
+
+<p>
+  <strong>Corrective action:</strong>
+  <%= @ca.corrective_action %>
+</p>
+
+<p>
+  <strong>Preventive action:</strong>
+  <%= @ca.preventive_action %>
+</p>
+
+<p>
+  <strong>Validation:</strong>
+  <%= @ca.validation %>
+</p>
+
+<%= link_to 'Edit', edit_ca_path(@ca) %> |
+<%= link_to 'Back', cas_path %>
